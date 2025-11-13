@@ -960,8 +960,6 @@
         object-fit: cover;
     }
 
-    
-
     /* service area 3 */
     .expand-container {
         width: 100%;
@@ -1377,82 +1375,54 @@
             margin-left: 0px;
         }
 
-        .ca-blg-tag-list ul li a {
-            font-size: 14px;
-        }
-        .ca-servic-cat {
-            display: block;
-        }
-        
-        .ca-servic-cat-item {
-            border-right: none;
-        }
-        
-        .ca-blg-auth {
-            display: block;
-        }
-        
-        .ca-blg-auth-img {
-            margin-bottom: 15px;
-        }
-        .ca-blog-rep-form {
-            padding: 15px;
-        }
-        .ca-rep-cmt {
-            margin-left: 0px;
-        }
-        .ca-more-title {
-            font-size: 34px;
-            line-height: 34px;
-        }
-        /* slider 01 */
-    .ca-img1 img {
-        height: 696px;
-    }
-    .ca-img2 img {
-        height: 696px;
-    }
-    .ca-slide-title-1 {
-        font-size: 45px;
-        line-height: 55px;
-    }
-    .ca-sli-btn-1 {
-        display: block;
-    }
-    .ca-vid-content {
-        display: flex;
-        align-items: baseline;
-    }
-    .ca-hero-content-1 {
-        padding-top: 60px;
-    }
-    .ca-hero1-active.slick-initialized.slick-slider.slick-dotted {
-        margin-bottom: 0;
-    }
-    .ca-sli-btn-1.mt-32.wow.img-custom-anim-left {
-        margin-top: 15px;
-        margin-bottom: 15px;
+        /* Enhanced Contact Responsive Styles */
+@media (max-width: 991px) {
+    .ca-contact-from-3 {
+        padding: 30px 25px;
+        margin-bottom: 40px;
     }
     
-    .ca-vd-py-text p {
-        display: inline-block;
-        padding-top: 12px;
+    .ca-form-loca-3.ml-50 {
+        margin-left: 0;
     }
-    .ca-vd-ply-btn {
-        margin-top: 10px;
+    
+    .ca-business-hours {
+        margin-top: 20px;
     }
+}
 
-    /* contact iner */
-    .ca-conatct-form1 .ca-con-rep-form {
-        padding: 30px 15px;
+@media (max-width: 767px) {
+    .ca-contact-from-3 {
+        padding: 25px 20px;
+        border-radius: 15px;
     }
     
+    .ca-contact-title-2 {
+        font-size: 24px;
+    }
     
-    .ca-radion-btn {
-        display: block;
+    .ca-form-group input,
+    .ca-form-group textarea {
+        padding: 12px 15px;
+        font-size: 15px;
     }
-    .contact-page__google-map {
-        height: 400px;
+    
+    .ca-enhanced-form .nice-select {
+        padding: 12px 45px 12px 15px !important;
+        font-size: 15px;
+        min-height: 46px;
+        height: 46px !important;
     }
-
+    
+    .ca-enhanced-form .nice-select .current {
+        font-size: 15px;
+        line-height: 18px !important;
+    }
+    
+    .ca-enhanced-form .nice-select .option {
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+    
+    /* ...existing code... */
 }

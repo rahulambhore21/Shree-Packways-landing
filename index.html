@@ -20,6 +20,97 @@
       <link rel="stylesheet" href="assets/css/style.css">
       <link rel="stylesheet" href="assets/css/responsive.css">
       <style>
+
+        .ca-con-rep-form{
+    padding: 60px 107px;
+}
+.ca-con-rep-form .ca-title{
+    font-size: 32px;
+    line-height: 32px;
+}
+
+
+.ca-con-rep-form .nice-select.wide.ca-select {
+    height: 56px;
+}
+.contact-page__google-map {
+    width: 100%;
+    height: 700px;
+}
+.ca-conatct-form1 {
+    margin-top: -200px;
+}
+.ca-radion-btn {
+    text-align: start;
+}
+
+
+.ca-radion-btn input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #0E47A1; 
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.2s ease;
+    margin-right: 12px;
+}
+
+.ca-cmt-from .nice-select:after {
+    height: 8px;
+    width: 8px;
+}
+.ca-cmt-from .nice-select.wide.ca-select:focus{
+    outline: none;
+}
+
+
+
+.ca-cmt-from .nice-select.wide.ca-select .current {
+    color: #5A5D63;
+}
+/* Change border color on hover */
+.ca-radion-btn input[type="radio"]:hover {
+    border-color: #0E47A1; 
+}
+
+.ca-radion-btn input[type="radio"]::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s ease;
+}
+
+.ca-radion-btn input[type="radio"]:checked::before {
+    background: #0E47A1; 
+}
+
+.ca-radion-btn {
+    display: flex;
+    align-items: center;
+}
+.ca-conatct-form1 textarea {
+    margin-bottom: 0;
+}
+
+.ca-radion-btn {
+    margin-bottom: 32px;
+}
+.ca-radion-btn label {
+    color: #5A5D63;
+    font-size: 16px;
+    line-height: 30px;
+}
         * {
             margin: 0;
             padding: 0;
@@ -274,6 +365,191 @@
                 font-size: 16px;
             }
         }
+
+        /* Enhanced Contact Form Styles */
+.ca-contact-from-3 {
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.ca-contact-content-3 {
+    background: #fff;
+    padding: 40px;
+    border-bottom: 2px solid #ff6b35;
+}
+
+.ca-contact-title-2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.ca-enhanced-form {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ca-form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.ca-form-group input,
+.ca-form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.ca-form-group input:focus,
+.ca-form-group textarea:focus {
+    border-color: #ff6b35;
+    outline: none;
+}
+
+.ca-select-group {
+    position: relative;
+}
+
+.ca-select-group .nice-select {
+    padding-right: 40px;
+}
+
+.submit-btn {
+    text-align: center;
+}
+
+.ca-btn-primary-3 {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #ff6b35;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.ca-btn-primary-3:hover {
+    background: #e65c30;
+    transform: translateY(-2px);
+}
+
+.ca-enhanced-location {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.ca-location-icbox {
+    display: flex;
+    align-items: flex-start;
+}
+
+.ca-location-icbox-img {
+    margin-right: 15px;
+}
+
+.ca-location-icon {
+    font-size: 24px;
+    color: #ff6b35;
+    line-height: 1;
+}
+
+.ca-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.ca-location-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.ca-location-link:hover {
+    color: #0056b3;
+}
+
+.ca-phone-link,
+.ca-email-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.ca-phone-link:hover,
+.ca-email-link:hover {
+    color: #ff6b35;
+}
+
+.ca-business-hours {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.ca-hours-list {
+    font-size: 16px;
+    color: #333;
+}
+
+.ca-hour-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.ca-hour-item:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 991px) {
+    .ca-contact-from {
+        padding: 40px 30px;
+    }
+
+    .ca-contact-content-3 {
+        padding: 30px;
+    }
+
+    .ca-enhanced-form {
+        padding: 20px;
+    }
+
+    .ca-title {
+        font-size: 16px;
+    }
+
+    .ca-business-hours {
+        padding: 15px;
+    }
+
+    .ca-hours-list {
+        font-size: 14px;
+    }
+
+    .ca-hour-item {
+        padding: 8px 0;
+    }
+}
     </style>
    </head>
    <body>
@@ -428,48 +704,64 @@
          <!-- working section End -->
 
          <!-- contact-section start -->
-         <section class="contact-3-area cream-bg-3 pt-100 pb-70">
+         <section class="contact-3-area cream-bg-3 pt-100 pb-70" id="contact">
             <div class="container">
                <div class="ca-blog-content-3 ca-sec-content-3 text-center mb-60 aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1000">
                   <h5 class="ca-section-subtitle subtitle-bg-6 p-relative theme-color-3 br-50">Contact Us</h5>
-                  <h2 class="ca-section-title theme-black-3 fnw-600 pt-16 ca-text-cap"> Trusted by Industry Leaders</h2>
-                  <p class="pt-16">Gain insights into effective warehouse management strategies that<br> maximize space, improve accuracy, and boost productivity. </p>
+                  <h2 class="ca-section-title theme-black-3 fnw-600 pt-16 ca-text-cap">Get in Touch with Our Team</h2>
+                  <p class="pt-16">Ready to streamline your logistics? Contact us today for personalized solutions<br>that will transform your shipping and transport operations.</p>
                </div>
                <div class="row align-items-center">
                   <div class="col-xl-6 mb-30">
                      <div class="ca-contact-from w-bg ca-contact-from-3 aos-init aos-animate" data-aos="fade-right" data-aos-duration="1200">
                         <div class="ca-contact-content-3">
                            <h4 class="ca-contact-title-2 theme-black-2 fnw-600">Send Us A Message</h4>
-                           <p class="pt-16 pb-24">As a fellow small business owner, we know the fulfillment that an a best to comes from running & own business contact our service to Cargon.</p>
+                           <p class="pt-16 pb-24">We're here to help with all your logistics needs. Fill out the form below and our team will get back to you within 24 hours.</p>
                         </div>
-                        <form action="#">
+                        <form action="#" class="ca-enhanced-form">
                            <div class="row">
                               <div class="col-md-6 mb-20">
-                                 <input type="text" placeholder="First Name">
+                                 <div class="ca-form-group">
+                                    <input type="text" placeholder="First Name" required>
+                                 </div>
                               </div>
                               <div class="col-md-6 mb-20">
-                                 <input type="text" placeholder="Last Name">
+                                 <div class="ca-form-group">
+                                    <input type="text" placeholder="Last Name" required>
+                                 </div>
                               </div>
                               <div class="col-md-6 mb-20">
-                                 <input type="tel" placeholder="Phone Number">
+                                 <div class="ca-form-group">
+                                    <input type="tel" placeholder="Phone Number" required>
+                                 </div>
                               </div>
                               <div class="col-md-6 mb-20">
-                                 <input type="email" placeholder="Email Address">
+                                 <div class="ca-form-group">
+                                    <input type="email" placeholder="Email Address" required>
+                                 </div>
                               </div>
                               <div class="col-md-12 mb-20">
-                                 <select class="nice-select wide ca-select">
-                                    <option data-display="Service Type">Nothing</option>
-                                    <option value="1">01</option>
-                                    <option value="2">02</option>
-                                    <option value="3">03</option>
-                                    <option value="4">04</option>
-                                 </select>
+                                 <div class="ca-form-group ca-select-group">
+                                    <select class="nice-select wide ca-select" required>
+                                       <option value="" data-display="Select Service Type">Select Service Type</option>
+                                       <option value="air-freight">Air Freight</option>
+                                       <option value="sea-freight">Sea Freight</option>
+                                       <option value="road-freight">Road Freight</option>
+                                       <option value="warehousing">Warehousing</option>
+                                       <option value="customs">Customs Clearance</option>
+                                    </select>
+                                 </div>
                               </div>
                               <div class="col-md-12 mb-20">
-                                 <textarea name="message" id="message" placeholder="Message"></textarea>
+                                 <div class="ca-form-group">
+                                    <textarea name="message" id="message" placeholder="Tell us about your logistics requirements..." rows="5" required></textarea>
+                                 </div>
                               </div>
                               <div class="submit-btn">
-                                 <button class="ca-btn-primary-3 theme-bg-3 text-white br-50" type="submit" value="submit"> Send Message<span><i class="fa-solid fa-angle-right"></i></span></button>
+                                 <button class="ca-btn-primary-3 ca-enhanced-btn theme-bg-3 text-white br-50" type="submit"> 
+                                    <span class="btn-text">Send Message</span>
+                                    <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                                 </button>
                               </div>
                            </div>
                         </form>
@@ -478,38 +770,60 @@
                   <div class="col-xl-6 mb-30">
                      <div class="ca-form-loca-3 ml-50 aos-init aos-animate" data-aos="fade-left" data-aos-duration="1400">
                         <!-- single box item -->
-                        <div class="ca-location-3 mb-20">
+                        <div class="ca-location-3 ca-enhanced-location mb-30">
                            <div class="ca-location-icbox">
                               <div class="ca-location-icbox-img">
-                                 <span><img src="assets/img/icon/ca-location3.1.svg" alt=""></span>
+                                 <span class="ca-location-icon"><i class="fas fa-map-marker-alt"></i></span>
                               </div>
                               <div class="ca-location-icbox-text">
-                                 <h4 class="ca-title fnw-600 theme-black-3 pb-12">Contact Us</h4>
-                                 <p>198 West 21th Street,New York NY City 1010 <br> freightexpress@mail.com</p>
+                                 <h4 class="ca-title fnw-600 theme-black-3 pb-12">Visit Our Office</h4>
+                                 <p>198 West 21th Street, New York<br>NY City 10001, United States</p>
+                                 <a href="#" class="ca-location-link">Get Directions <i class="fas fa-external-link-alt"></i></a>
                               </div>
                            </div>
                         </div>
                         <!-- single box item -->
-                        <div class="ca-location-3 mb-20">
+                        <div class="ca-location-3 ca-enhanced-location mb-30">
                            <div class="ca-location-icbox">
                               <div class="ca-location-icbox-img">
-                                 <span><img src="assets/img/icon/ca-location3.2.svg" alt=""></span>
+                                 <span class="ca-location-icon"><i class="fas fa-phone-alt"></i></span>
                               </div>
                               <div class="ca-location-icbox-text">
-                                 <h4 class="ca-title fnw-600 theme-black-3 pb-12">Call or Text</h4>
-                                 <a href="tel:123-456-7890">123-456-7890</a>
+                                 <h4 class="ca-title fnw-600 theme-black-3 pb-12">Call or Text Us</h4>
+                                 <p>Available 24/7 for urgent logistics needs</p>
+                                 <a href="tel:123-456-7890" class="ca-phone-link">+1 (123) 456-7890</a>
                               </div>
                            </div>
                         </div>
                         <!-- single box item -->
-                        <div class="ca-location-3 mb-20">
+                        <div class="ca-location-3 ca-enhanced-location mb-30">
                            <div class="ca-location-icbox">
                               <div class="ca-location-icbox-img">
-                                 <span><img src="assets/img/icon/ca-location3.3.svg" alt=""></span>
+                                 <span class="ca-location-icon"><i class="fas fa-envelope"></i></span>
                               </div>
                               <div class="ca-location-icbox-text">
-                                 <h4 class="ca-title fnw-600 theme-black-3 pb-12">Send Email</h4>
-                                 <a href="mailto:infotransportlogistics@gmail.com">infotransportlogistics@gmail.com</a>
+                                 <h4 class="ca-title fnw-600 theme-black-3 pb-12">Email Support</h4>
+                                 <p>Get a response within 2 hours</p>
+                                 <a href="mailto:info@cargonlogistics.com" class="ca-email-link">info@cargonlogistics.com</a>
+                              </div>
+                           </div>
+                        </div>
+                        
+                        <!-- Business Hours -->
+                        <div class="ca-business-hours mt-40">
+                           <h4 class="ca-title fnw-600 theme-black-3 pb-20">Business Hours</h4>
+                           <div class="ca-hours-list">
+                              <div class="ca-hour-item">
+                                 <span class="day">Monday - Friday</span>
+                                 <span class="time">8:00 AM - 6:00 PM</span>
+                              </div>
+                              <div class="ca-hour-item">
+                                 <span class="day">Saturday</span>
+                                 <span class="time">9:00 AM - 4:00 PM</span>
+                              </div>
+                              <div class="ca-hour-item">
+                                 <span class="day">Sunday</span>
+                                 <span class="time">Emergency Only</span>
                               </div>
                            </div>
                         </div>
