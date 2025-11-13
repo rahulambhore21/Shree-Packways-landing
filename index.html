@@ -553,6 +553,29 @@
     </style>
    </head>
    <body>
+      <!-- Header with Logo start -->
+      <header class="ca-logo-header">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-lg-3 col-md-4 col-6">
+                  <div class="ca-logo-wrapper">
+                     <img src="assets/img/imges/download.webp" alt="Company Logo" class="ca-main-logo">
+                     <!-- Placeholder for logo - replace with your actual logo -->
+                  </div>
+               </div>
+               <div class="col-lg-9 col-md-8 col-6">
+                  <div class="ca-header-contact-info">
+                     <div class="ca-contact-item">
+                        <span class="ca-contact-icon"><i class="fas fa-phone"></i></span>
+                        <a href="tel:+919953228020">+91 995-322-8020</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- Header with Logo end -->
+
       <main>
          <!-- slider start -->
          <div class="ca-slider-active-3" id="home" style="margin-top: 0; padding-top: 0;">
@@ -720,41 +743,34 @@
                         </div>
                         <form action="#" class="ca-enhanced-form">
                            <div class="row">
-                              <div class="col-md-6 mb-20">
-                                 <div class="ca-form-group">
-                                    <input type="text" placeholder="First Name" required>
-                                 </div>
-                              </div>
-                              <div class="col-md-6 mb-20">
-                                 <div class="ca-form-group">
-                                    <input type="text" placeholder="Last Name" required>
-                                 </div>
-                              </div>
-                              <div class="col-md-6 mb-20">
-                                 <div class="ca-form-group">
-                                    <input type="tel" placeholder="Phone Number" required>
-                                 </div>
-                              </div>
-                              <div class="col-md-6 mb-20">
-                                 <div class="ca-form-group">
-                                    <input type="email" placeholder="Email Address" required>
-                                 </div>
-                              </div>
                               <div class="col-md-12 mb-20">
-                                 <div class="ca-form-group ca-select-group">
-                                    <select class="nice-select wide ca-select" required>
-                                       <option value="" data-display="Select Service Type">Select Service Type</option>
-                                       <option value="air-freight">Air Freight</option>
-                                       <option value="sea-freight">Sea Freight</option>
-                                       <option value="road-freight">Road Freight</option>
-                                       <option value="warehousing">Warehousing</option>
-                                       <option value="customs">Customs Clearance</option>
-                                    </select>
+                                 <div class="ca-form-group">
+                                    <input type="text" placeholder="Name" required>
                                  </div>
                               </div>
                               <div class="col-md-12 mb-20">
                                  <div class="ca-form-group">
-                                    <textarea name="message" id="message" placeholder="Tell us about your logistics requirements..." rows="5" required></textarea>
+                                    <input type="email" placeholder="Email" required>
+                                 </div>
+                              </div>
+                              <div class="col-md-12 mb-20">
+                                 <div class="ca-form-group">
+                                    <input type="tel" placeholder="Mobile" required>
+                                 </div>
+                              </div>
+                              <div class="col-md-6 mb-20">
+                                 <div class="ca-form-group">
+                                    <input type="text" placeholder="Moving From" required>
+                                 </div>
+                              </div>
+                              <div class="col-md-6 mb-20">
+                                 <div class="ca-form-group">
+                                    <input type="text" placeholder="Moving To" required>
+                                 </div>
+                              </div>
+                              <div class="col-md-12 mb-20">
+                                 <div class="ca-form-group">
+                                    <textarea name="message" id="message" placeholder="Message" rows="5" required></textarea>
                                  </div>
                               </div>
                               <div class="submit-btn">
@@ -776,8 +792,8 @@
                                  <span class="ca-location-icon"><i class="fas fa-map-marker-alt"></i></span>
                               </div>
                               <div class="ca-location-icbox-text">
-                                 <h4 class="ca-title fnw-600 theme-black-3 pb-12">Visit Our Office</h4>
-                                 <p>198 West 21th Street, New York<br>NY City 10001, United States</p>
+                                 <h4 class="ca-title fnw-600 theme-black-3 pb-12">Our Location</h4>
+                                 <p>Shop No. 2, Ashok vihar, Phase-3,<br>Opposite C-2 Gate, Palam Vihar Road,<br>Gurgaon, Haryana</p>
                                  <a href="#" class="ca-location-link">Get Directions <i class="fas fa-external-link-alt"></i></a>
                               </div>
                            </div>
@@ -789,9 +805,9 @@
                                  <span class="ca-location-icon"><i class="fas fa-phone-alt"></i></span>
                               </div>
                               <div class="ca-location-icbox-text">
-                                 <h4 class="ca-title fnw-600 theme-black-3 pb-12">Call or Text Us</h4>
-                                 <p>Available 24/7 for urgent logistics needs</p>
-                                 <a href="tel:123-456-7890" class="ca-phone-link">+1 (123) 456-7890</a>
+                                 <h4 class="ca-title fnw-600 theme-black-3 pb-12">Call Us On</h4>
+                                 <p>Available for all your moving needs</p>
+                                 <a href="tel:+919953228020" class="ca-phone-link">+91 995-322-8020</a>
                               </div>
                            </div>
                         </div>
@@ -802,31 +818,16 @@
                                  <span class="ca-location-icon"><i class="fas fa-envelope"></i></span>
                               </div>
                               <div class="ca-location-icbox-text">
-                                 <h4 class="ca-title fnw-600 theme-black-3 pb-12">Email Support</h4>
+                                 <h4 class="ca-title fnw-600 theme-black-3 pb-12">Leave a message</h4>
                                  <p>Get a response within 2 hours</p>
-                                 <a href="mailto:info@cargonlogistics.com" class="ca-email-link">info@cargonlogistics.com</a>
+                                 <a href="mailto:info@shreepackways.com" class="ca-email-link">info@shreepackways.com</a>
+                                 <a href="mailto:spcmpvtltd28@gmail.com" class="ca-email-link" style="display: block; margin-top: 5px;">spcmpvtltd28@gmail.com</a>
                               </div>
                            </div>
                         </div>
                         
                         <!-- Business Hours -->
-                        <div class="ca-business-hours mt-40">
-                           <h4 class="ca-title fnw-600 theme-black-3 pb-20">Business Hours</h4>
-                           <div class="ca-hours-list">
-                              <div class="ca-hour-item">
-                                 <span class="day">Monday - Friday</span>
-                                 <span class="time">8:00 AM - 6:00 PM</span>
-                              </div>
-                              <div class="ca-hour-item">
-                                 <span class="day">Saturday</span>
-                                 <span class="time">9:00 AM - 4:00 PM</span>
-                              </div>
-                              <div class="ca-hour-item">
-                                 <span class="day">Sunday</span>
-                                 <span class="time">Emergency Only</span>
-                              </div>
-                           </div>
-                        </div>
+                       
                      </div>
                   </div>
                </div>

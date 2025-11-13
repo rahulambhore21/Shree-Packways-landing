@@ -2945,466 +2945,79 @@ flex: 2;
     z-index: 1;
 }
 
+/* Logo Header Styles */
+.ca-logo-header {
+    background: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 999;
+}
 
-/* ==========================
-                   PORTFOLIO AREA CSS
-===============================================*/
+.ca-logo-wrapper {
+    display: flex;
+    align-items: center;
+}
 
-/* ============================================
-                   PORTFOLIO Style 1
-============================================ */
-.sm-img{
-    height: 300px;
+.ca-main-logo {
+    max-height: 60px;
+    width: auto;
+    transition: all 0.3s ease;
 }
-.big-img{
-    height: 500px;
+
+.ca-header-contact-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
-.ca-portfolio-img {
-    display: contents;
-    border-radius: 7px;
+
+.ca-contact-item {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
 }
-.portfolio-link span {
-    background: #FF5E14;
-    height: 70px;
-    width: 70px;
-    display: block;
-    line-height: 70px;
-    text-align: center;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: .3s;
-}
-.ca-single-portfolio-item:hover .portfolio-link span{
-    opacity: 1;
-    visibility:visible;
-    transform: translateY(50px);
-}
-.ca-single-portfolio-item.big-img:hover .portfolio-link span{
-    transform: translateY(153px);
-}
-.ca-portfolio-content-meta {
-    padding: 24px;
-    margin-left: 24px;
-    margin-right: 24px;
-    opacity: 0;
-    visibility: hidden;
-    transition: .3s;
-}
-.ca-portfolio-content-meta p {
-    font-size: 16px;
-    line-height: 16px;
+
+.ca-contact-icon {
+    background: #0E47A1;
     color: #fff;
-    opacity: .8;
-    padding-bottom: 14px;
-}
-.ca-single-portfolio-item:hover .ca-portfolio-content-meta{
-    transform: translateY(-122px);
-    opacity: 1;
-    visibility: visible;
-    transition: .3s;
-}
-.ca-por-title{
-    font-size: 18px;
-    line-height: 18px;
-}
-.ca-por-title a{
-    font-size: 20px;
-    line-height: 20px;
-    color: #fff;
-    font-weight: 600;
-}
-.ca-single-portfolio-item {
-    border-radius: 7px;
-    transition: .3s;
-}
-
-.ca-single-portfolio-item:hover .ca-portfolio-img img {
-    transform: scale(1.1) rotate(3deg);
-    transition: .3s;
-}
-
-.ca-portfolio-img img {
-    transition: .3s;
-    object-fit: cover;
-}
-a.portfolio-link span img {
     height: 40px;
     width: 40px;
-    line-height: 36px;
-}
-
-.portfolio-link:hover span img {
-    transform: rotate(45deg);
-    transition: .3s;
-}
-
-a.portfolio-link span img {
-    transition: .3s;
-}
-
-
-/* ============================================
-                   PORTFOLIO Style 2
-============================================ */
-
-/* ============================================
-                   PORTFOLIO Style 3
-============================================ */
-.ca-single-pro-img-3 img {
-    height: 370px;
-    object-fit: cover;
-    border-radius: 7px;
-}
-
-.ca-project-hover-item1-icon span img {
-    height: 25px;
-    width: 25px;
-}
-
-.ca-project-hover-item1-icon span {
-    background: #fff;
-    height: 60px;
-    width: 60px;
-    display: block;
-    line-height: 60px;
-    text-align: center;
-    border-radius: 50px;
-    transition: .3s;
-}
-
-.ca-project-hover-item1-icon:hover span{
-    transform: rotate(45deg);
-    transition: .3s;
-}
-
-h4.ca-project-hov-sub-title {
-    font-size: 16px;
-    line-height: 16px;
-    font-weight: 600;
-    color: #fff;
-    opacity: .8;
-    padding-top: 24px;
-    padding-bottom: 16px;
-}
-
-h3.ca-project-hov-title a{
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 20px;
-    padding-bottom: 16px;
-    color: #fff;
-    display: block;
-}
-
-.ca-project-hover-item-content p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    color: #fff;
-    opacity: .8;
-}
-.ca-project-hover-item1 {
-    background: #0E47A1;
-    border-radius: 7px;
-    padding: 24px;
-    text-align: center;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-.ca-project-hover-item1-icon {
-    display: inline-block;
-}
-.ca-single-pro-img-3 {
-    position: relative;
-    overflow: hidden;
-    border-radius: 7px;
-}
-.ca-project-hover-item1 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(0);
-    margin: 0 auto;
-    width: calc(100% - 40px);
-    left: 20px;
-    opacity: 0;
-    visibility: hidden;
-    transition: .3s;
-}
-
-.ca-single-pro-img-3:hover .ca-project-hover-item1{
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(-50%);
-    transition: .3s;
-}
-
-.ca-single-pro-img-3:hover img {
-    transform: scale(1.1);
-    transition: .3s;
-    border-radius: 7px;
-}
-
-.ca-single-pro-img-3 img {
-    transition: .3s;
-    border-radius: 7px;
-    overflow: hidden;
-}
-.ca-single-pro-img-3 .pro-lar-img-1 {
-    height: 470px;
-}
-
-
-/* ==========================
-                  Team AREA CSS
-===============================================*/
-.ca-single-team-box {
-    background: #F9F5F3;
-    overflow: hidden;
-    border-radius: 7px;
-}
-
-.ca-team-title a {
-    color: #1B0901;
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 600;
-    display: block;
-}
-
-.ca-single-team-content span {
-    color: #4A4A49;
-    padding-top: 10px;
-    display: block;
-}
-
-.ca-single-team-content {
-    padding: 24px;
-}
-.ca-team-sc-icon {
     display: flex;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: -50px;
-    transform: translateY(-30px);
-}
-
-.team-left a {
-    display: inline-block;
-    background: #fff;
-    height: 50px;
-    width: 50px;
-    line-height: 50px;
-    text-align: center;
-    border-radius: 50px;
-    margin-left: 16px;
-    transition: .3s;
-    color: #FF5E14;
-    font-size: 20px;
-}
-.team-left a:hover{
-    background: #FF5E14;
-    color: #fff;
-    transition: .3s;
-}
-.team-right a:hover{
-    background: #FF5E14;
-    color: #fff;
-    transition: .3s;
-}
-.team-center span:hover{
-    background: #FF5E14;
-    color: #fff;
-    transition: .3s;
-    transform: rotate(45deg);
-}
-.team-center span {
-    height: 50px;
-    width: 50px;
-    background: #fff;
-    display: block;
-    line-height: 50px;
-    text-align: center;
-    border-radius: 50px;
-    margin: 0 16px;
-    transition: .3s;
-    color: #FF5E14;
-    font-size: 20px;
-}
-
-.team-right a {
-    display: inline-block;
-    background: #fff;
-    height: 50px;
-    width: 50px;
-    line-height: 50px;
-    text-align: center;
-    border-radius: 50px;
-    margin-right: 16px;
-    transition: .3s;
-    color: #FF5E14;
-    font-size: 20px;
-}
-
-.team-left {
-    transform: translateX(-100px);
-    opacity: 0;
-    visibility: hidden;
-    transition: .3s;
-}
-
-.team-right {
-    transform: translateX(100px);
-    opacity: 0;
-    visibility: hidden;
-    transition: .3s;
-}
-.ca-team-sc-icon:hover .team-left {
-    transform: translateX(0px);
-    transition: .3s;
-    opacity: 1;
-    visibility: visible;
-}
-.ca-team-sc-icon:hover .team-right {
-    transform: translateX(0px);
-    transition: .3s;
-    opacity: 1;
-    visibility: visible;
-}
-
-.ca-single-team-img {
-    overflow: hidden;
-}
-
-.ca-single-team-img img {
-    transition: .3s;
-}
-
-.ca-single-team-img:hover img {
-    transform: scale(1.1);
-    transition: .3s;
-}
-/* ==========================
-                  WORKING AREA CSS
-===============================================*/
-.ca-video-img {
-    height: 580px;
-     overflow: hidden;
-}
-.video-play-button {
-    position: absolute;
-    top: 50%;
-    display: block;
-    height: 90px;
-    width: 90px;
-    line-height: 90px;
-    text-align: center;
-    border-radius: 50px;
-    font-size: 24px;
-    color: #0E47A1;
-    transform: translateY(-46px);
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    z-index: 2;
-}
-
-.video-play-button:before {
-    content: "";
-    position: absolute;
-    z-index: 0;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    display: block;
-    width: 55px;
-    height: 55px;
-    background: #fff;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
-    animation: pulse-border 1100ms ease-out infinite;
-  }
-  
-  .video-play-button:after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    display: block;
-    width: 60px;
-    height: 60px;
-    background: #fff;
-    border-radius: 50%;
-    transition: all 200ms;
-  }
-  
-  .video-play-button span {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.ca-contact-item a {
+    color: #333;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.ca-contact-item a:hover {
     color: #0E47A1;
-    position: relative;
-    z-index: 11;
 }
-  
-  @keyframes pulse-border {
-    0% {
-      transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-      opacity: 1;
-    }
-    100% {
-      transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-      opacity: 0;
-    }
-  }
 
-
-
-.ca-video-img:after {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background: #00060F;
-    opacity: .7;
-    z-index: 1;
-}
-.video-play-section {
-    margin-bottom: -290px;
-}
-.ca-counter-3 {
-    z-index: 2;
-    right: 0;
-    bottom: 0;
-}
-.ca-counter-3 {
-    z-index: 2;
-    right: 0;
-    bottom: 0;
+/* Logo placeholder styling */
+.ca-main-logo[src*="placeholder"] {
+    background: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    padding: 15px 30px;
+    border-radius: 5px;
+    color: #6c757d;
+    font-size: 14px;
+    text-align: center;
     display: flex;
-    background: #0E47A1;
-    padding: 24px 36px;
-    border-radius: 7px 0px 0px 0px;
+    align-items: center;
+    justify-content: center;
 }
-.ca-counter-area-3 {
-    padding-right: 20px;
-    border-right: 1px solid #fff;
-    margin-right: 20px;
-}
-.ca-counter-area-3:last-child {
-    border: none;
-    padding: 0;
-    margin: 0;
-}
-.ca-counter-area-3 p {
-    color: #fff;
-    opacity: .8;
-    font-size: 18px;
-    line-height: 18px;
+
+.ca-main-logo[src*="placeholder"]:after {
+    content: "Your Logo Here";
+    font-family: Arial, sans-serif;
 }
 

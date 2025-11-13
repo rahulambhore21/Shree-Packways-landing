@@ -1407,22 +1407,78 @@
         font-size: 15px;
     }
     
-    .ca-enhanced-form .nice-select {
-        padding: 12px 45px 12px 15px !important;
-        font-size: 15px;
-        min-height: 46px;
-        height: 46px !important;
+    .ca-form-group input[placeholder="Moving From"],
+    .ca-form-group input[placeholder="Moving To"] {
+        margin-bottom: 15px;
     }
     
-    .ca-enhanced-form .nice-select .current {
-        font-size: 15px;
-        line-height: 18px !important;
+    /* Stack Moving From and Moving To on mobile */
+    .col-md-6.mb-20 {
+        margin-bottom: 15px;
+    }
+}
+
+/* Logo Header Responsive Styles */
+@media (max-width: 991px) {
+    .ca-logo-header {
+        padding: 12px 0;
     }
     
-    .ca-enhanced-form .nice-select .option {
-        padding: 10px 15px;
-        font-size: 15px;
+    .ca-main-logo {
+        max-height: 50px;
     }
     
-    /* ...existing code... */
+    .ca-header-contact-info {
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .ca-contact-item {
+        margin-left: 0;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .ca-logo-header {
+        padding: 10px 0;
+    }
+    
+    .ca-main-logo {
+        max-height: 45px;
+    }
+    
+    .ca-header-contact-info {
+        justify-content: flex-end;
+        margin-top: 0;
+    }
+    
+    .ca-contact-item {
+        font-size: 14px;
+    }
+    
+    .ca-contact-icon {
+        height: 35px;
+        width: 35px;
+        font-size: 14px;
+    }
+    
+    .ca-contact-item a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .ca-logo-wrapper {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    
+    .ca-header-contact-info {
+        justify-content: center;
+    }
+    
+    .ca-main-logo {
+        max-height: 40px;
+    }
 }
