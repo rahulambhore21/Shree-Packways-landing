@@ -400,154 +400,159 @@
 .ca-form-group textarea {
     width: 100%;
     padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
     font-size: 16px;
     color: #333;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
+    background: #fff;
 }
 
 .ca-form-group input:focus,
 .ca-form-group textarea:focus {
-    border-color: #ff6b35;
+    border-color: #007bff;
     outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
 }
 
-.ca-select-group {
+.ca-form-group.valid input,
+.ca-form-group.valid textarea {
+    border-color: #28a745;
+    background: #f8fff9;
+}
+
+.ca-form-group.invalid input,
+.ca-form-group.invalid textarea {
+    border-color: #dc3545;
+    background: #fff5f5;
+}
+
+.ca-error-message {
+    position: absolute;
+    bottom: -22px;
+    left: 0;
+    color: #dc3545;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.ca-form-group.invalid .ca-error-message {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ca-success-message {
+    position: absolute;
+    bottom: -22px;
+    left: 0;
+    color: #28a745;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.ca-form-group.valid .ca-success-message {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ca-validation-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ca-form-group.valid .ca-validation-icon.success {
+    opacity: 1;
+    color: #28a745;
+}
+
+.ca-form-group.invalid .ca-validation-icon.error {
+    opacity: 1;
+    color: #dc3545;
+}
+
+.ca-enhanced-btn {
     position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
-.ca-select-group .nice-select {
-    padding-right: 40px;
+.ca-enhanced-btn:disabled {
+    background: #6c757d !important;
+    cursor: not-allowed;
+    transform: none !important;
 }
 
-.submit-btn {
-    text-align: center;
+.ca-enhanced-btn .btn-spinner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.ca-btn-primary-3 {
-    display: inline-block;
-    padding: 12px 30px;
-    background: #ff6b35;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 50px;
-    transition: background 0.3s ease, transform 0.3s ease;
+.ca-enhanced-btn.loading .btn-text,
+.ca-enhanced-btn.loading .btn-icon {
+    opacity: 0;
 }
 
-.ca-btn-primary-3:hover {
-    background: #e65c30;
-    transform: translateY(-2px);
+.ca-enhanced-btn.loading .btn-spinner {
+    opacity: 1;
 }
 
-.ca-enhanced-location {
-    background: #fff;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff40;
+    border-top: 2px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.ca-form-progress {
+    height: 4px;
+    background: #e9ecef;
+    border-radius: 2px;
+    overflow: hidden;
     margin-bottom: 20px;
 }
 
-.ca-location-icbox {
-    display: flex;
-    align-items: flex-start;
+.ca-form-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #007bff, #28a745);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+    width: 0%;
 }
 
-.ca-location-icbox-img {
-    margin-right: 15px;
-}
-
-.ca-location-icon {
-    font-size: 24px;
-    color: #ff6b35;
-    line-height: 1;
-}
-
-.ca-title {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.ca-location-link {
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.ca-location-link:hover {
-    color: #0056b3;
-}
-
-.ca-phone-link,
-.ca-email-link {
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 16px;
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.ca-phone-link:hover,
-.ca-email-link:hover {
-    color: #ff6b35;
-}
-
-.ca-business-hours {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-.ca-hours-list {
-    font-size: 16px;
-    color: #333;
-}
-
-.ca-hour-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-}
-
-.ca-hour-item:last-child {
-    border-bottom: none;
-}
-
-@media (max-width: 991px) {
-    .ca-contact-from {
-        padding: 40px 30px;
-    }
-
-    .ca-contact-content-3 {
-        padding: 30px;
-    }
-
-    .ca-enhanced-form {
-        padding: 20px;
-    }
-
-    .ca-title {
-        font-size: 16px;
-    }
-
-    .ca-business-hours {
-        padding: 15px;
-    }
-
-    .ca-hours-list {
+@media (max-width: 768px) {
+    .ca-form-group input,
+    .ca-form-group textarea {
+        padding: 12px;
         font-size: 14px;
     }
-
-    .ca-hour-item {
-        padding: 8px 0;
+    
+    .ca-error-message,
+    .ca-success-message {
+        font-size: 11px;
+        bottom: -20px;
     }
 }
     </style>
@@ -742,52 +747,79 @@
                            <p class="pt-16 pb-24">We're here to help with all your logistics needs. Fill out the form below and our team will get back to you within 24 hours.</p>
                         </div>
                         <form id="contactForm" class="ca-enhanced-form">
-   <div class="row">
+    <div class="ca-form-progress">
+        <div class="ca-form-progress-bar" id="formProgressBar"></div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12 mb-20">
+            <div class="ca-form-group">
+                <input type="text" name="name" id="name" placeholder="Full Name *" required>
+                <i class="ca-validation-icon success fas fa-check"></i>
+                <i class="ca-validation-icon error fas fa-times"></i>
+                <div class="ca-error-message"></div>
+                <div class="ca-success-message">✓ Looks good!</div>
+            </div>
+        </div>
 
-      <div class="col-md-12 mb-20">
-         <div class="ca-form-group">
-            <input type="text" name="name" placeholder="Name" required>
-         </div>
-      </div>
+        <div class="col-md-12 mb-20">
+            <div class="ca-form-group">
+                <input type="email" name="email" id="email" placeholder="Email Address *" required>
+                <i class="ca-validation-icon success fas fa-check"></i>
+                <i class="ca-validation-icon error fas fa-times"></i>
+                <div class="ca-error-message"></div>
+                <div class="ca-success-message">✓ Valid email!</div>
+            </div>
+        </div>
 
-      <div class="col-md-12 mb-20">
-         <div class="ca-form-group">
-            <input type="email" name="email" placeholder="Email" required>
-         </div>
-      </div>
+        <div class="col-md-12 mb-20">
+            <div class="ca-form-group">
+                <input type="tel" name="mobile" id="mobile" placeholder="Mobile Number *" required>
+                <i class="ca-validation-icon success fas fa-check"></i>
+                <i class="ca-validation-icon error fas fa-times"></i>
+                <div class="ca-error-message"></div>
+                <div class="ca-success-message">✓ Valid number!</div>
+            </div>
+        </div>
 
-      <div class="col-md-12 mb-20">
-         <div class="ca-form-group">
-            <input type="tel" name="mobile" placeholder="Mobile" required>
-         </div>
-      </div>
+        <div class="col-md-6 mb-20">
+            <div class="ca-form-group">
+                <input type="text" name="movingFrom" id="movingFrom" placeholder="Moving From *" required>
+                <i class="ca-validation-icon success fas fa-check"></i>
+                <i class="ca-validation-icon error fas fa-times"></i>
+                <div class="ca-error-message"></div>
+                <div class="ca-success-message">✓ Location set!</div>
+            </div>
+        </div>
 
-      <div class="col-md-6 mb-20">
-         <div class="ca-form-group">
-            <input type="text" name="movingFrom" placeholder="Moving From" required>
-         </div>
-      </div>
+        <div class="col-md-6 mb-20">
+            <div class="ca-form-group">
+                <input type="text" name="movingTo" id="movingTo" placeholder="Moving To *" required>
+                <i class="ca-validation-icon success fas fa-check"></i>
+                <i class="ca-validation-icon error fas fa-times"></i>
+                <div class="ca-error-message"></div>
+                <div class="ca-success-message">✓ Destination set!</div>
+            </div>
+        </div>
 
-      <div class="col-md-6 mb-20">
-         <div class="ca-form-group">
-            <input type="text" name="movingTo" placeholder="Moving To" required>
-         </div>
-      </div>
+        <div class="col-md-12 mb-20">
+            <div class="ca-form-group">
+                <textarea name="message" id="message" placeholder="Your Message *" rows="5" required></textarea>
+                <i class="ca-validation-icon success fas fa-check"></i>
+                <i class="ca-validation-icon error fas fa-times"></i>
+                <div class="ca-error-message"></div>
+                <div class="ca-success-message">✓ Message looks good!</div>
+            </div>
+        </div>
 
-      <div class="col-md-12 mb-20">
-         <div class="ca-form-group">
-            <textarea name="message" placeholder="Message" rows="5" required></textarea>
-         </div>
-      </div>
-
-      <div class="submit-btn">
-         <button class="ca-btn-primary-3 ca-enhanced-btn theme-bg-3 text-white br-50" type="submit">
-            <span class="btn-text">Send Message</span>
-            <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
-         </button>
-      </div>
-
-   </div>
+        <div class="submit-btn">
+            <button class="ca-btn-primary-3 ca-enhanced-btn theme-bg-3 text-white br-50" type="submit" id="submitBtn">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                <span class="btn-spinner"><div class="spinner"></div></span>
+            </button>
+        </div>
+    </div>
 </form>
 
                      </div>
@@ -961,6 +993,256 @@ document.getElementById("contactForm").addEventListener("submit", async function
       <script src="assets/js/waypoints.min.js"></script>
       <script src="assets/js/aos.js"></script>
       <script src="assets/js/main.js"></script>
+      <script>
+// Enhanced Form Validation
+class FormValidator {
+    constructor(formId) {
+        this.form = document.getElementById(formId);
+        this.fields = {};
+        this.progressBar = document.getElementById('formProgressBar');
+        this.submitBtn = document.getElementById('submitBtn');
+        this.initializeFields();
+        this.bindEvents();
+    }
+
+    initializeFields() {
+        const inputs = this.form.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            this.fields[input.name] = {
+                element: input,
+                group: input.closest('.ca-form-group'),
+                rules: this.getValidationRules(input),
+                isValid: false
+            };
+        });
+    }
+
+    getValidationRules(input) {
+        const rules = { required: input.hasAttribute('required') };
+        
+        switch(input.type) {
+            case 'email':
+                rules.email = true;
+                break;
+            case 'tel':
+                rules.phone = true;
+                break;
+        }
+
+        switch(input.name) {
+            case 'name':
+                rules.minLength = 2;
+                rules.pattern = /^[a-zA-Z\s]+$/;
+                break;
+            case 'mobile':
+                rules.pattern = /^[\+]?[1-9][\d]{9,14}$/;
+                break;
+            case 'movingFrom':
+            case 'movingTo':
+                rules.minLength = 2;
+                break;
+            case 'message':
+                rules.minLength = 10;
+                rules.maxLength = 500;
+                break;
+        }
+
+        return rules;
+    }
+
+    bindEvents() {
+        Object.keys(this.fields).forEach(fieldName => {
+            const field = this.fields[fieldName];
+            
+            field.element.addEventListener('input', () => {
+                this.validateField(fieldName);
+                this.updateProgress();
+            });
+
+            field.element.addEventListener('blur', () => {
+                this.validateField(fieldName);
+            });
+
+            field.element.addEventListener('focus', () => {
+                this.clearFieldState(fieldName);
+            });
+        });
+
+        this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+    }
+
+    validateField(fieldName) {
+        const field = this.fields[fieldName];
+        const value = field.element.value.trim();
+        const errors = [];
+
+        // Required validation
+        if (field.rules.required && !value) {
+            errors.push('This field is required');
+        }
+
+        if (value) {
+            // Min length validation
+            if (field.rules.minLength && value.length < field.rules.minLength) {
+                errors.push(`Minimum ${field.rules.minLength} characters required`);
+            }
+
+            // Max length validation
+            if (field.rules.maxLength && value.length > field.rules.maxLength) {
+                errors.push(`Maximum ${field.rules.maxLength} characters allowed`);
+            }
+
+            // Email validation
+            if (field.rules.email && !this.isValidEmail(value)) {
+                errors.push('Please enter a valid email address');
+            }
+
+            // Phone validation
+            if (field.rules.phone && !this.isValidPhone(value)) {
+                errors.push('Please enter a valid phone number');
+            }
+
+            // Pattern validation
+            if (field.rules.pattern && !field.rules.pattern.test(value)) {
+                if (fieldName === 'name') {
+                    errors.push('Name should only contain letters and spaces');
+                } else {
+                    errors.push('Invalid format');
+                }
+            }
+        }
+
+        this.updateFieldState(fieldName, errors);
+        return errors.length === 0;
+    }
+
+    updateFieldState(fieldName, errors) {
+        const field = this.fields[fieldName];
+        const errorElement = field.group.querySelector('.ca-error-message');
+
+        field.group.classList.remove('valid', 'invalid');
+        
+        if (errors.length > 0) {
+            field.group.classList.add('invalid');
+            errorElement.textContent = errors[0];
+            field.isValid = false;
+        } else if (field.element.value.trim()) {
+            field.group.classList.add('valid');
+            field.isValid = true;
+        } else {
+            field.isValid = false;
+        }
+    }
+
+    clearFieldState(fieldName) {
+        const field = this.fields[fieldName];
+        field.group.classList.remove('invalid');
+    }
+
+    updateProgress() {
+        const totalFields = Object.keys(this.fields).length;
+        const validFields = Object.values(this.fields).filter(field => field.isValid).length;
+        const progress = (validFields / totalFields) * 100;
+        this.progressBar.style.width = `${progress}%`;
+    }
+
+    validateForm() {
+        let isFormValid = true;
+        Object.keys(this.fields).forEach(fieldName => {
+            if (!this.validateField(fieldName)) {
+                isFormValid = false;
+            }
+        });
+        return isFormValid;
+    }
+
+    async handleSubmit(e) {
+        e.preventDefault();
+
+        if (!this.validateForm()) {
+            this.showMessage('Please fix the errors above', 'error');
+            return;
+        }
+
+        this.setLoadingState(true);
+
+        const formData = {};
+        Object.keys(this.fields).forEach(fieldName => {
+            formData[fieldName] = this.fields[fieldName].element.value.trim();
+        });
+
+        try {
+            const response = await fetch("https://shreepackways-smtp.vercel.app/api/send-email", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                this.showMessage('Message sent successfully! We\'ll get back to you soon.', 'success');
+                this.resetForm();
+            } else {
+                throw new Error('Server error');
+            }
+        } catch (error) {
+            this.showMessage('Failed to send message. Please try again or contact us directly.', 'error');
+        } finally {
+            this.setLoadingState(false);
+        }
+    }
+
+    setLoadingState(loading) {
+        this.submitBtn.disabled = loading;
+        this.submitBtn.classList.toggle('loading', loading);
+    }
+
+    showMessage(message, type) {
+        // Remove existing messages
+        const existingMessage = this.form.querySelector('.form-message');
+        if (existingMessage) existingMessage.remove();
+
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `form-message alert alert-${type === 'success' ? 'success' : 'danger'}`;
+        messageDiv.style.cssText = `
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-weight: 500;
+            text-align: center;
+            background: ${type === 'success' ? '#d4edda' : '#f8d7da'};
+            color: ${type === 'success' ? '#155724' : '#721c24'};
+            border: 1px solid ${type === 'success' ? '#c3e6cb' : '#f5c6cb'};
+        `;
+        messageDiv.textContent = message;
+
+        this.form.appendChild(messageDiv);
+        
+        setTimeout(() => messageDiv.remove(), 5000);
+    }
+
+    resetForm() {
+        this.form.reset();
+        Object.keys(this.fields).forEach(fieldName => {
+            this.fields[fieldName].group.classList.remove('valid', 'invalid');
+            this.fields[fieldName].isValid = false;
+        });
+        this.progressBar.style.width = '0%';
+    }
+
+    isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    isValidPhone(phone) {
+        return /^[\+]?[1-9][\d]{9,14}$/.test(phone.replace(/[\s\-\(\)]/g, ''));
+    }
+}
+
+// Initialize form validation when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    new FormValidator('contactForm');
+});
+</script>
    </body>
 
 <!-- Mirrored from unifato.com/cargon/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Nov 2025 12:22:10 GMT -->
