@@ -140,12 +140,12 @@
 
         .ca-section-subtitle {
             display: inline-block;
-            color: #ff6b35;
+            color: #007bff;
             font-size: 14px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
-            background: rgba(255, 107, 53, 0.1);
+            background: rgba(0, 123, 255, 0.1);
             padding: 8px 20px;
             border-radius: 50px;
             margin-bottom: 15px;
@@ -231,7 +231,7 @@
             right: 30px;
             width: 50px;
             height: 50px;
-            background: #ff6b35;
+            background: #007bff;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -251,7 +251,7 @@
         }
 
         .ca-project-hov-sub-title {
-            color: #ff6b35;
+            color: #007bff;
             font-size: 14px;
             font-weight: 600;
             text-transform: uppercase;
@@ -273,7 +273,7 @@
         }
 
         .ca-project-hov-title a:hover {
-            color: #ff6b35;
+            color: #007bff;
         }
 
         .ca-project-hover-item-content p {
@@ -303,7 +303,7 @@
         }
 
         .carousel-btn:hover {
-            background: #ff6b35;
+            background: #007bff;
             color: white;
             transform: translateY(-50%) scale(1.1);
         }
@@ -334,12 +334,12 @@
         }
 
         .indicator.active {
-            background: #ff6b35;
+            background: #007bff;
             transform: scale(1.4);
         }
 
         .indicator:hover {
-            background: #ff6b35;
+            background: #007bff;
         }
 
         @media (max-width: 768px) {
@@ -376,7 +376,7 @@
 .ca-contact-content-3 {
     background: #fff;
     padding: 40px;
-    border-bottom: 2px solid #ff6b35;
+    border-bottom: 2px solid #007bff;
 }
 
 .ca-contact-title-2 {
@@ -554,6 +554,110 @@
         font-size: 11px;
         bottom: -20px;
     }
+}
+
+/* WhatsApp Sticky Button */
+.whatsapp-sticky {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    width: 60px;
+    height: 60px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: whatsappPulse 2s infinite;
+    text-decoration: none;
+}
+
+.whatsapp-sticky:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+    background: #128c7e;
+    text-decoration: none;
+}
+
+.whatsapp-sticky i {
+    font-size: 28px;
+    color: white;
+}
+
+.whatsapp-tooltip {
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-tooltip::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 5px solid transparent;
+    border-left-color: #333;
+}
+
+.whatsapp-sticky:hover .whatsapp-tooltip {
+    opacity: 1;
+}
+
+@keyframes whatsappPulse {
+    0% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.7), 0 0 0 10px rgba(37, 211, 102, 0.1);
+    }
+    100% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+}
+
+@media (max-width: 768px) {
+    .whatsapp-sticky {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .whatsapp-sticky i {
+        font-size: 22px;
+    }
+    
+    .whatsapp-tooltip {
+        display: none;
+    }
+}
+
+/* Update theme colors throughout */
+.theme-bg-3 {
+    background: #007bff !important;
+}
+
+.theme-color-3 {
+    color: #007bff !important;
+}
+
+.subtitle-bg-6 {
+    background: rgba(0, 123, 255, 0.1) !important;
 }
     </style>
    </head>
@@ -877,6 +981,13 @@
          <!-- contact-section end -->
 
       </main>
+
+      <!-- WhatsApp Sticky Button -->
+      <a href="https://wa.me/919953228020?text=Hello! I would like to know more about your logistics services." class="whatsapp-sticky" target="_blank" rel="noopener">
+         <i class="fab fa-whatsapp"></i>
+         <div class="whatsapp-tooltip">Chat with us on WhatsApp</div>
+      </a>
+
       <!-- js file -->
        <script>
 document.getElementById("contactForm").addEventListener("submit", async function (e) {
