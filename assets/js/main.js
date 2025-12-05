@@ -1,5 +1,69 @@
 $(document).ready(function(){
   
+    // Enhanced Truck Animation with Scroll Control
+    function initTruckAnimation() {
+        const truck = $('.ca-slider-img-3 img');
+        const heroSection = $('.ca-slider-3');
+        
+        if (truck.length && heroSection.length) {
+            // Set initial position (far right, off-screen)
+            truck.css({
+                'transform': 'translateX(90vw)',
+                'transition': 'none'
+            });
+            
+            // Animate truck on page load
+            setTimeout(() => {
+                truck.css({
+                    'transition': 'transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                    'transform': 'translateX(300px)'
+                });
+            }, 500);
+        }
+    }
+    
+    // Scroll-controlled truck movement
+    function handleTruckScroll() {
+        const truck = $('.ca-slider-img-3 img');
+        const heroSection = $('.ca-slider-3');
+        
+        if (truck.length && heroSection.length) {
+            const scrollTop = $(window).scrollTop();
+            const heroHeight = heroSection.outerHeight();
+            const scrollProgress = Math.min(scrollTop / heroHeight, 1);
+            
+            // Calculate truck movement - starts from 300px (initial position) and moves left
+            const initialPosition = 100; // Initial position in pixels
+            const maxMovement = 50; // Maximum movement in vw units
+            const currentPosition = initialPosition - (scrollProgress * (initialPosition + (maxMovement * window.innerWidth / 100)));
+            
+            const opacity = 1 - (scrollProgress * 0.5); // Fade out slightly
+            const scale = 1 - (scrollProgress * 0.2); // Scale down slightly
+            
+            truck.css({
+                'transform': `translateX(${currentPosition}px) scale(${scale})`,
+                'opacity': Math.max(opacity, 0.3), // Minimum opacity of 0.3
+                'transition': 'none' // Remove transition during scroll for smooth animation
+            });
+        }
+    }
+    
+    // Initialize truck animation
+    initTruckAnimation();
+    
+    // Bind scroll event for truck animation with throttling for better performance
+    let isScrolling = false;
+    $(window).on('scroll', function() {
+        if (!isScrolling) {
+            window.requestAnimationFrame(function() {
+                handleTruckScroll();
+                isScrolling = false;
+            });
+            isScrolling = true;
+        }
+    });
+
+
     // Expand gallery
     const slides = document.querySelectorAll('.slide');
     let active = document.querySelector('.slide.active');

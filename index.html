@@ -659,6 +659,71 @@
 .subtitle-bg-6 {
     background: rgba(0, 123, 255, 0.1) !important;
 }
+
+/* Enhanced Truck Animation Styles */
+.ca-slider-img-3 {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: auto;
+    height: auto;
+    overflow: visible;
+}
+
+.ca-slider-img-3 img {
+    max-width: none;
+    width: 80vw;
+    height: auto;
+    object-fit: contain;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero section optimization for animation */
+.ca-slider-3 {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Performance optimizations */
+.ca-slider-3 * {
+    transform-style: preserve-3d;
+}
+
+/* Mobile responsive truck */
+@media (max-width: 1200px) {
+    .ca-slider-img-3 img {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .ca-slider-img-3 {
+        top: 60%;
+    }
+    
+    .ca-slider-img-3 img {
+        width: 100vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .ca-slider-img-3 {
+        top: 65%;
+    }
+    
+    .ca-slider-img-3 img {
+        width: 110vw;
+    }
+}
     </style>
    </head>
    <body>
@@ -697,7 +762,7 @@
                   </div>
                </div>
                <div class="ca-slider-img-3 p-absolute">
-                  <img src="assets/img/slider/truck-slide3.png" alt="">
+                  <img src="assets/img/slider/truck-slide3.png" alt="Logistics Truck" loading="eager">
                </div>
                <div class="ca-line-shape3">
                   <img src="assets/img/shape/ca-shape3.1.png" alt="">
